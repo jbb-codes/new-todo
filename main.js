@@ -235,3 +235,4 @@ function addDefaultProject() {
 }
 
 addDefaultProject();
+save();
