@@ -27,9 +27,10 @@ const LOCAL_STORAGE_PROJECT_KEY = "task.projects";
 const LOCAL_STORAGE_SELECTED_PROJECT_ID_KEY = "task.selectedProjectId";
 const LOCAL_STORAGE_NEW_USER_KEY = "task.newUser";
 
-let projects = JSON.parse(
-  localStorage.getItem(LOCAL_STORAGE_PROJECT_KEY) || []
-);
+// remove for gh pages JSON.parse(
+//   localStorage.getItem(LOCAL_STORAGE_PROJECT_KEY) || []
+// );
+let projects = [];
 
 let selectedProjectId = localStorage.getItem(
   LOCAL_STORAGE_SELECTED_PROJECT_ID_KEY
