@@ -222,8 +222,8 @@ function addDefaultProject() {
   const selectedProject = projects.find(
     (project) => project.name === "Default"
   );
-  console.log(localStorage.getItem(LOCAL_STORAGE_NEW_USER_KEY));
-  if (selectedProject === undefined && LOCAL_STORAGE_NEW_USER_KEY === null) {
+
+  if (selectedProject == undefined) {
     const defaultProject = createProject("Default");
     projects.push(defaultProject);
     const newTask = createTask("New task");
@@ -231,8 +231,7 @@ function addDefaultProject() {
     selectedProjectId = defaultProject.id;
     saveAndRender();
   }
-  projectDisplayContainer.style.display = "none";
-  save();
+  render();
 }
 
 addDefaultProject();
